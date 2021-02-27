@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Ebay Product Search" timestamp="2021-02-26T23:34:24" time="12.004" tests="4" failures="0" errors="4" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Ebay Product Search"/>
+      <property name="capabilities" value="chrome.88_0_4324_150.windows"/>
+      <property name="file" value="./test/specs/search.js"/>
+    </properties>
+    <testcase classname="chrome.88_0_4324_150.windows.Ebay Product Search" name="should open the main url and verify the title" time="11.968">
+      <error message="Channel closed"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/bf438fa1f0d9b95a5fae9d0339b7092c79f4ccc1/window/current/maximize - {}
+RESULT: {}
+COMMAND: POST /session/bf438fa1f0d9b95a5fae9d0339b7092c79f4ccc1/url - {"url":"https://www.ebay.com/"}
+RESULT: {"url":"https://www.ebay.com/"}
+COMMAND: GET /session/bf438fa1f0d9b95a5fae9d0339b7092c79f4ccc1/title - {}
+COMMAND: DELETE /session/bf438fa1f0d9b95a5fae9d0339b7092c79f4ccc1 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error [ERR_IPC_CHANNEL_CLOSED]: Channel closed
+    at new NodeError (node:internal/errors:329:5)
+    at process.target.send (node:internal/child_process:724:16)
+    at /Users/sheylaortiz/Projects/webdriverio-tutorial/node_modules/@wdio/local-runner/build/run.js:24:59
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.88_0_4324_150.windows.Ebay Product Search" name="should search for a product and verify the sarch text value" time="0.015">
+      <error message="A sessionId is required for this command"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/undefined/window/current/maximize - {}
+COMMAND: POST /session/undefined/element - {"using":"css selector","value":"#gh-ac"}
+COMMAND: GET /session/undefined/screenshot - {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: A sessionId is required for this command
+    at $ (/Users/sheylaortiz/Projects/webdriverio-tutorial/node_modules/@wdio/runner/build/index.js:181:42)
+    at SearchPage.searchInput (/Users/sheylaortiz/Projects/webdriverio-tutorial/test/pageobjects/search.page.js:6:16)
+    at Context.<anonymous> (/Users/sheylaortiz/Projects/webdriverio-tutorial/test/specs/search.js:14:19)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.88_0_4324_150.windows.Ebay Product Search" name="should redirect to a new page and verify the title" time="0.004">
+      <error message="Channel closed"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/undefined/window/current/maximize - {}
+COMMAND: GET /session/undefined/title - {}
+]]></system-out>
+      <system-err><![CDATA[
+Error [ERR_IPC_CHANNEL_CLOSED]: Channel closed
+    at new NodeError (node:internal/errors:329:5)
+    at process.target.send (node:internal/child_process:724:16)
+    at Object.exports.logHookError (/Users/sheylaortiz/Projects/webdriverio-tutorial/node_modules/@wdio/utils/build/test-framework/errorHandler.js:29:13)
+    at Context.exports.testFrameworkFnWrapper (/Users/sheylaortiz/Projects/webdriverio-tutorial/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:36:26)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.88_0_4324_150.windows.Ebay Product Search" name="should update the search category" time="0.005">
+      <error message="A sessionId is required for this command"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/undefined/window/current/maximize - {}
+COMMAND: POST /session/undefined/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: GET /session/undefined/screenshot - {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: A sessionId is required for this command
+    at $ (/Users/sheylaortiz/Projects/webdriverio-tutorial/node_modules/@wdio/runner/build/index.js:181:42)
+    at SearchPage.category (/Users/sheylaortiz/Projects/webdriverio-tutorial/test/pageobjects/search.page.js:12:16)
+    at Context.<anonymous> (/Users/sheylaortiz/Projects/webdriverio-tutorial/test/specs/search.js:27:38)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
