@@ -1,0 +1,9 @@
+{
+  "script": "return (function getProperty(element, property) {\n    return element[property];\n}).apply(null, arguments)",
+  "args": [
+    {
+      "ELEMENT": "2"
+    },
+    "value"
+  ]
+}
